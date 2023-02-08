@@ -1,0 +1,90 @@
+{% extends 'base.html' %} 
+
+{% block title %}
+Admin Login 
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+    <nav class="navbar navbar-default shadow-sm rounded-4  px-4 py-4">
+        <div class="title-header">
+            <h1 class="title text-light">PWD</h1>
+        </div>
+        <div class="navbar-header">
+            <div class="navbar-content">
+                <div class="row">
+                    <div class="col">
+                        <ul class="nav">
+                            <li class="nav-item mx-3">
+                                <a class="btn btn-outlined-warning shadow-sm border-1 text-light" aria-current="page" href="{{ url_for('home') }}">Home</a>
+                              </li>
+                              <li class="nav-item mx-3">
+                                <a class="btn btn-outlined-warning shadow-sm border-1 text-light" href="#">View related Agency</a>
+                              </li>
+                              <li class="nav-item mx-3">
+                                <a class="btn btn-outlined-warning shadow-sm border-1 text-light" href="#">FAQ</a>
+                              </li>
+                              <li class="nav-item mx-3">
+                                <a class="btn btn-outlined-warning shadow-sm border-1 text-light" href="{{ url_for('content') }}">Content</a>
+                              </li>
+                              <li class="nav-item mx-3">
+                                <a class="btn btn-outlined-warning shadow-sm border-1 text-light" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" href="#">About Us</a>
+                              </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container-login-wrapper">
+     
+        
+        <form class="form-login" method="POST" action="{{ url_for('adminlogin') }}">
+            {% if msg is defined and msg %}
+            <div class="alert alert-danger alter-dismissable fade show" role="alert">
+                {{ msg }}
+                                
+            </div>
+            {% endif %}
+            <!-- Email input -->
+            <h1 class="display-6 text-light">Login Admin</h1>
+            <div class="form-outline mb-4">
+            <input name="email_ad" type="email" id="form2Example1" class="form-control" />
+            <label class="form-label" for="form2Example1">Email address</label>
+            </div>
+        
+            <!-- Password input -->
+            <div class="form-outline mb-4">
+            <input name="user_pass" type="password" id="form2Example2" class="form-control" />
+            <label class="form-label" for="form2Example2">Password</label>
+            </div>
+        
+            <!-- 2 column grid layout for inline styling -->
+            <div class="row mb-4">
+            <div class="col d-flex justify-content-center">
+                <!-- Checkbox -->
+                <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="form2Example31" checked />
+                <label class="form-check-label" for="form2Example31"> Remember me </label>
+                </div>
+            </div>
+        
+            <div class="col">
+                <!-- Simple link -->
+                <a href="#!">Forgot password?</a>
+            </div>
+            </div>
+        
+            <!-- Submit button -->
+            <button type="submit"  name="submit" value="submit" id="submit" class="btn btn-primary btn-block mb-4">Login</button>
+        
+            <!-- Register buttons -->
+            <div class="text-center">
+            <p>Not a member? <a href="#!">Register</a></p>
+            <p>or sign up with:</p>
+           
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

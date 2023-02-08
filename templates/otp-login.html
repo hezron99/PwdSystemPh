@@ -1,0 +1,56 @@
+{% extends 'base.html' %} 
+
+{% block title %}
+Verification
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+    <nav class="navbar navbar-default shadow-sm rounded-4  px-4 py-4">
+        <div class="title-header">
+            <h1 class="title text-light">PWD</h1>
+        </div>
+        <div class="navbar-header">
+            <div class="navbar-content">
+                <div class="row">
+                    <div class="col">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container-main-verefy">
+        <div class="container-verefy">
+            <form class="form-row g-3 align-items-center fs-5" method="POST" action="http://127.0.0.1:5000/OTP">
+                <h1 class="form-texts">Please Enter OTP</h1>
+                <div class="col-auto">
+                  <label for="inputText" class="col-form-label">OTP</label>
+                </div>
+                <div class="col-auto">
+                  <input type="text" name="otp" id="inputText" class="form-control" aria-describedby="passwordHelpInline">
+                </div>
+                <div class="col-auto">
+                  <span id="passwordHelpInline" class="form-text text-light">
+                    Please type the OTP that you recieve in your email address
+                    
+                  </span>
+                  
+                </div>
+                <small>Note: Do not share your OTP</small>
+                <div class="btn-form mt-3">
+                    <button class="btn btn-primary" type="submit" value="submit">Login</button>
+                </div>
+                <br>
+                {% if msg is defined and msg %}
+                    <div class="alert alert-danger alter-dismissable fade show" role="alert">
+                        {{ msg }}
+                        
+                    </div>
+                {% endif %}
+                
+              </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,289 @@
+{% extends 'base.html' %} 
+
+{% block title %}
+Login 
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+    <nav class="navbar navbar-default shadow-sm rounded-4  px-4 py-4">
+        <div class="title-header">
+            <h1 class="title text-light">PWD</h1>
+        </div>
+        <div class="navbar-header">
+            <div class="navbar-content">
+                <div class="row">
+                    <div class="col">
+                        <ul class="nav">
+                            <li class="nav-item mx-3">
+                                <a class="btn btn-outlined-warning shadow-sm border-1 text-light" aria-current="page" href="{{ url_for('home') }}">Home</a>
+                              </li>
+                              <li class="nav-item mx-3">
+                                <a class="btn btn-outlined-warning shadow-sm border-1 text-light" href="#">View related Agency</a>
+                              </li>
+                              <li class="nav-item mx-3">
+                                <a class="btn btn-outlined-warning shadow-sm border-1 text-light" href="#">FAQ</a>
+                              </li>
+                              <li class="nav-item mx-3">
+                                <a class="btn btn-outlined-warning shadow-sm border-1 text-light" href="{{ url_for('content') }}">Content</a>
+                              </li>
+                              <li class="nav-item mx-3">
+                                <a class="btn btn-outlined-warning shadow-sm border-1 text-light" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" href="#">About Us</a>
+                              </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row mx-auto mt-5"><!-- necessary for sticky footer -->
+            <div class="col-register col-md-4">
+                <h1 class="display-6 text-light">Create Account</h1>
+                <hr>
+                
+                    <label for="validationCustom01" class="form-label">Full name</label>
+                    <input type="text" class="form-control" id="fullname" required placeholder="Enter your Full Name">
+                    <label for="validationCustom01" class="form-label">Email Address</label>
+                    <input type="email" class="form-control" id="email"  required placeholder="Enter your Email address">
+                    <label for="validationCustom05" class="form-label">Pwd ID</label>
+                    <input type="number" class="form-control w-75" id="pwdID" required placeholder="Enter your pwd ID">
+                    <label for="validationCustom03" class="form-label">Address</label>
+                    <input type="text" class="form-control" id="address" required placeholder="Enter your Address">
+                    <label for="validationCustom05" class="form-label">Age</label>
+                    <input type="text" class="form-control w-25" id="age" required placeholder="Enter your Age">
+                    <label for="validationCustom04" class="form-label">Status</label>
+                        <select class="form-select" id="status" required>
+                            <option selected disabled value="">Choose...</option>
+                            <option>Blind</option>
+                            <option>Orthpedic Disability</option>
+                            <option>Communication Disability</option>
+                            <option>Mental Disability</option>
+                            <option>Visual Disability</option>
+                            <option>Learning Disability</option>
+                            <option>chronic Illness</option>
+                        </select>
+                    <div class="form-check mt-4">
+                        <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                        <label class="form-check-label" for="invalidCheck">
+                        Agree to terms and conditions
+                        </label>
+                            
+                    </div>
+                    <div class="col-12 mt-4">
+                        <button class="btn btn-primary" type="submit" id="registered">Submit form</button>
+                    </div>
+                
+            </div>
+            <div class="card-entity col-md-4 mx-auto px-5  rounded-5 border-1 shadow-lg ">
+              
+                        {% if msg is defined and msg %}
+                            <div class="alert alert-danger alter-dismissable fade show" role="alert">
+                                {{ msg }}
+                                
+                            </div>
+                        {% endif %}
+                   
+                <h1 class="display-6 text-light text-center">Login</h1>
+                    <hr>
+                <form id="loginForm" method="POST" action="{{ url_for('login') }}">
+                    <label for="validationCustom01" class="form-label">Email Address</label>
+                    <input type="email" class="form-control" id="login_email" name="email"  required placeholder="Enter your Email address">
+                    <label for="validationCustom03" class="form-label mt-3">Full Name</label>
+                    <input type="text" class="form-control" id="login_fullname" name="fullname" required placeholder="Enter your Full Name">
+                    <div class="form-check mt-4">
+                        <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                        <label class="form-check-label" for="invalidCheck">
+                        Make sure the email you input is registered.
+                        </label>
+                    </div>
+                    <div class="mt-5">
+                            <button type="submit" class="btn btn-primary" value="Login" id="login" name="login">Login</button>
+                    </div>
+                </form>
+            </div>
+            <section class="section-container row mt-5 ">
+                <div class="section-content row row-col-auto">
+                    <div class="col">
+                        <img src="/static/image/sss.png" alt="sss" class="img-responsive rounded-5">
+                    </div>
+                    <div class="col">
+                        <img src="/static/image/DSWD-Logo.png" alt="dswd" class="img-responsive1 rounded-5">
+                    </div>
+                    <div class="col">
+                        <img src="/static/image/pag-ibig.png" alt="sss" class="img-responsive2 rounded-5">
+                    </div>
+                    <div class="col">
+                        <img src="/static/image/philhealth.png" alt="sss" class="img-responsive3 rounded-5">
+                    </div>
+                    <div class="col">
+                        <img src="/static/image/dole1.png" alt="sss" class="img-responsive4 rounded-5">
+                    </div>
+                    
+                </div>
+                
+
+            </section>      
+            <div class="col-md-3">
+                
+                <div class="invalid-feedback">
+                    Please provide your age.
+                </div>
+            </div>
+            <div class="col-md-3">
+                    
+            <div class="col-12 mt-4">
+                
+            </div>
+            
+        </div>
+    </div>
+    
+</div> 
+<footer class="text-center text-lg-start text-muted">
+    <!-- Section: Social media -->
+    <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+    <!-- Left -->
+    <div class="me-5 d-none d-lg-block">
+        <span>Get connected with us on social networks:</span>
+    </div>
+    <!-- Left -->
+
+    <!-- Right -->
+    <div>
+        <a href="" class="me-4 link-secondary">
+        <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="" class="me-4 link-secondary">
+        <i class="fab fa-twitter"></i>
+        </a>
+        <a href="" class="me-4 link-secondary">
+        <i class="fab fa-google"></i>
+        </a>
+        <a href="" class="me-4 link-secondary">
+        <i class="fab fa-instagram"></i>
+        </a>
+        <a href="" class="me-4 link-secondary">
+        <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="" class="me-4 link-secondary">
+        <i class="fab fa-github"></i>
+        </a>
+    </div>
+    <!-- Right -->
+    </section>
+    <!-- Section: Social media -->
+
+    <!-- Section: Links  -->
+    <section class="">
+    <div class="container text-center text-md-start mt-5">
+        <!-- Grid row -->
+        <div class="row mt-3">
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+            <!-- Content -->
+            <h6 class="text-uppercase fw-bold mb-4">
+            <i class="fas fa-gem me-3 text-secondary"></i>Company name
+            </h6>
+            <p>
+            Here you can use rows and columns to organize your footer content. Lorem ipsum
+            dolor sit amet, consectetur adipisicing elit.
+            </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">
+            Products
+            </h6>
+            <p>
+            <a href="#!" class="text-reset">Angular</a>
+            </p>
+            <p>
+            <a href="#!" class="text-reset">React</a>
+            </p>
+            <p>
+            <a href="#!" class="text-reset">Vue</a>
+            </p>
+            <p>
+            <a href="#!" class="text-reset">Laravel</a>
+            </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">
+            Useful links
+            </h6>
+            <p>
+            <a href="#!" class="text-reset">Pricing</a>
+            </p>
+            <p>
+            <a href="#!" class="text-reset">Settings</a>
+            </p>
+            <p>
+            <a href="#!" class="text-reset">Orders</a>
+            </p>
+            <p>
+            <a href="#!" class="text-reset">Help</a>
+            </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+            <p><i class="fas fa-home me-3 text-secondary"></i> New York, NY 10012, US</p>
+            <p>
+            <i class="fas fa-envelope me-3 text-secondary"></i>
+            info@example.com
+            </p>
+            <p><i class="fas fa-phone me-3 text-secondary"></i> + 01 234 567 88</p>
+            <p><i class="fas fa-print me-3 text-secondary"></i> + 01 234 567 89</p>
+        </div>
+        <!-- Grid column -->
+        </div>
+        <!-- Grid row -->
+    </div>
+    </section>
+    <!-- Section: Links  -->
+
+    <!-- Copyright -->
+    <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.025);">
+    © 2023 Copyright:
+    <a class="text-reset fw-bold" href="">PWD Disability Community</a>
+    </div>
+    <!-- Copyright -->
+</footer>
+{% endblock %}
+
+{% block funcJSRegion %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.js" integrity="sha512-nO7wgHUoWPYGCNriyGzcFwPSF+bPDOR+NvtOYy2wMcWkrnCNPKBcFEkU80XIN14UVja0Gdnff9EmydyLlOL7mQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+    $(document).ready(function(){
+        $('#registered').click(function(){
+            $.post("http://127.0.0.1:5000/registration" , { 
+                fullname: $('#fullname').val(),
+                pwd_id: $('#pwd_id').val(),
+                email: $('#email').val(),
+                address: $('#address').val(),
+                age: $('#age').val(),
+                status: $('#status').val()
+            },
+            function(data,Status){
+                
+                alert("Successfully registered")
+            })
+        })
+    });
+    
+   
+    
+</script>
+{% endblock %}
+    

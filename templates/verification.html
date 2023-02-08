@@ -1,0 +1,46 @@
+{% extends 'base.html' %} 
+
+{% block title %}
+Verification
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+    <nav class="navbar navbar-default shadow-sm rounded-4  px-4 py-4">
+        <div class="title-header">
+            <h1 class="title text-light">PWD</h1>
+        </div>
+        <div class="navbar-header">
+            <div class="navbar-content">
+                <div class="row">
+                    <div class="col">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container-main-verefy">
+        <div class="container-verefy">
+            <form class="form-row g-3 align-items-center fs-5" method="POST" action="http://127.0.0.1:5000/verification">
+                <h1 class="form-texts">Please Confirm your Email</h1>
+                <div class="col-auto">
+                  <label for="inputEmail" class="col-form-label">Email</label>
+                </div>
+                <div class="col-auto">
+                  <input type="text" id="inputEmail" class="form-control" name="email-verify" aria-describedby="passwordHelpInline">
+                </div>
+                <div class="col-auto">
+                  <span id="passwordHelpInline" class="form-text text-light">
+                    Please Enter your Email Address to Confirm OTP
+                  </span>
+                </div>
+                <div class="btn-form mt-3">
+                    <button class="btn btn-primary" type="submit" value="submit">Confirm</button>
+                </div>
+                
+              </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

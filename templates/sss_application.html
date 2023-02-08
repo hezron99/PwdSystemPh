@@ -1,0 +1,118 @@
+{% extends 'base.html' %} 
+
+{% block title %}
+SSS Application Info
+{% endblock %}  
+
+{% block content %}
+<div class="container-fluid">
+    <nav class="navbar navbar-default shadow-sm rounded-4  px-4 py-4">
+        <div class="title-header">
+            <h1 class="title text-light">PWD</h1>
+        </div>
+        <div class="navbar-header">
+            <div class="navbar-content">
+                <div class="row">
+                    <div class="col">
+                        <ul class="nav">
+                            <li class="nav-item mx-3">
+                                <a class="btn btn-outlined-warning shadow-sm border-1 text-light" aria-current="page" href="{{ url_for('admin') }}">Member Information</a>
+                              </li>
+                              <li class="nav-item mx-3">
+                                <a class="btn btn-outlined-warning shadow-sm border-1 text-light" href="{{ url_for('admin') }}">SSS application Information</a>
+                              </li>
+                              <li class="nav-item mx-3">
+                                <a class="btn btn-outlined-warning shadow-sm border-1 text-light" href="">DSWD application Information</a>
+                              </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="container-table">
+        <h1 class="display-6  text-light">This is the member information!</h1>
+        <div class=" card px-5 py-5 rounded-5 shadow-lg border-0">
+            <div class="card-btn">
+                <button class="btn btn-warning"><a class="btn btn-outlined-warning shadow-sm border-1 text-light" href="{{ url_for('application_info') }}">DSWD application Info</a> </button>
+                <button class="btn btn-warning"><a class="btn btn-outlined-warning shadow-sm border-1 text-light" href="{{ url_for('sss_application') }}">SSS application Info</a></button>
+            </div>
+            
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">First Name</th>
+                        <th scope="col">Last Name</th>
+                        <th scope="col">Email Address</th>
+                        <th scope="col">PWD ID</th>
+                        <th scope="col">SSS ID</th>
+                        <th scope="col">Address</th>
+                        <th scope="col">Type of Loan</th>
+                        <th scope="col">Gender</th>
+                        <th scope="col">Zip code</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                    <tbody>
+                        
+                    </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block funcJSRegion %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.js" integrity="sha512-nO7wgHUoWPYGCNriyGzcFwPSF+bPDOR+NvtOYy2wMcWkrnCNPKBcFEkU80XIN14UVja0Gdnff9EmydyLlOL7mQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+    $(document).ready(function(){
+        $.get('http://127.0.0.1:5000/get_sss_info', function(data,status){
+
+            var string = "";
+            for( var key in data) {
+                const element =  data[key];
+                $('table > tbody').append(
+                    "<tr>"+
+                        "<td>"+element.fname+"</td>"+
+                        "<td>"+element.lname+"</td>"+
+                        "<td>"+element.user_email+"</td>"+
+                        "<td>"+element.id_pwd+"</td>"+
+                        "<td>"+element.id_sss+"</td>"+
+                        "<td>"+element.f_address+"</td>"+
+                        "<td>"+element.tol+"</td>"+
+                        "<td>"+element.gender+"</td>"+
+                        "<td>"+element.zip_f+"</td>"+
+                        "<td>"+'<span class="badge bg-danger" type="button" style="pointer:cursor" id='+element.sss_id+'>DELETE</span>'+"</td>"+
+                        "<td>"+'<span class="badge bg-warning" type="button" style="pointer:cursor" onclick="update('+element.sss_id+')">Update</span>'+"</td>"+
+                        
+                    +"</tr>"
+                );
+
+            }
+
+
+        })
+        
+    });
+    $(document).ready(function(){
+        $('table tbody').on('click',"td > span", function(){
+            const userid = $(this)[0].id;
+            $.post('http://127.0.0.1:5000/getdelete', {userid: userid}, 
+                function(data,status){
+                console.log(data);
+                location.reload()
+
+            })
+        });
+    });
+   
+    function update(id){
+        $(document).ready(function(){
+            $('#updateModal').modal('show');
+        });
+        
+    }
+</script>
+
+
+{% endblock %}

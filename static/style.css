@@ -1,0 +1,369 @@
+/* HOME CSS */
+body {
+    margin: 0;
+
+}
+.container-main-wrapper {
+    margin: 0;
+    padding: 0;
+    background-image: url('/static/image/image5.jpg');
+    background-position-x: center;
+    background-size: 100%;
+    
+    
+}
+
+.landing-page,.landing-item,.img-page{
+    margin: 0;
+    width: 100%;
+    
+}
+.container-fluid-x{
+    height: 600px;
+    margin-left: 100px;
+    margin-right: 100px;
+    
+    
+}
+.content-container-page{
+   padding: 40px;
+}
+.title-page{
+    text-shadow: black 1px 1px;
+}
+.card-body-page,.card-body-title,.card-text-content{
+    color: white;
+    width: 500px;
+    font-family:  sans-serif;
+    font-size: 20px;
+    text-shadow: black 1px 1px;
+}
+
+    
+.header-nav-text{
+    text-shadow: black 1px 1px 1px;
+    color: white;
+   
+}
+.navigation-btn,.nav-btn{
+    background-color:#ffc107;
+    border-radius: 10px;
+    color:white;
+    
+}
+.navigation-btn:hover{
+    color:rgba(255, 166, 0, 0.872);
+    background-color: white;
+    
+}
+.content-section-one {
+    background-image: url(/static/image/background.jpg);
+    background-position-y: center;
+}
+.content-section-two {
+    background-image: url(/static/image/background.jpg);
+    background-position-y: center;
+    padding: 40px;
+}
+#menu-bar{
+    display: none;
+}
+.navbar-header label {
+    color:black;
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+}
+#menu-content{
+    display: none;
+}
+.card-body label{
+    color:black;
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+}
+.card-container{
+    margin-left: 60px;
+}
+.card-content{
+    margin-left: 60px;
+}
+
+.carousel-inner, .img1{
+    width: 80%; 
+    height:600px;
+}
+.content {
+    width:500px; 
+    height: 300px;
+}
+.card-body-join {
+    padding:60px;
+}
+.img2 {
+    width: 60%;
+    height: 400px;
+}
+.card-secondary{
+    height: 500px;
+}
+
+/* website portal */
+.page-header {
+    font-style:inherit;
+    font-weight: 800;
+    text-shadow: black 1px 1px;
+    color:aliceblue
+}
+.container-portal,.portal,.row-content {
+    
+    margin-top: 30px;
+    margin-right: 50px;
+    margin-left: 40px;
+    align-items: center;
+}
+
+.content-col {
+    padding: 25px;
+}
+    
+.card-body-portal {
+    height: 250px;
+    text-align: center;
+    
+}
+.card-portal{
+    border-radius: 20px;
+    
+    margin-left: 50px;
+    padding: 10px;
+    
+}
+.content-wrapper {
+    height: 200px;
+    padding: 50px;
+    
+}
+.content-loan {
+    padding:20px;
+    border:solid 1px;
+    border-radius: 12px;
+}
+.container-loan-reg, .loan-info{
+    
+    
+    margin-left: 80px;
+    margin-right: 80px;
+    ;
+}
+.loan-info{
+    padding:50px;
+    background-color: rgb(228, 134, 11);
+    border-radius: 20px;
+   
+    
+}
+.btn-collapse{
+    background-color: rgba(255, 213, 0, 0.879);
+    border:0px;
+    border-radius: 10px;
+    width: 100px;
+    height: 50px;
+    font-style: inherit;
+    
+}
+.btn-collapse:hover{
+    color: white;
+    background-color: orange;
+}
+
+
+
+/* Registration And Login  Style */
+.card-entity{
+   
+    padding-top: 20px;
+    background-color: rgb(228, 134, 11);
+    
+}
+.col-register{
+    padding-top: 20px;
+   
+    margin-left: 100px;
+}
+.section-content, .section-container{
+    margin-right: 100px;
+    
+    
+    border-top: solid 1px;
+    border-bottom: solid 1px;
+}
+.img-responsive, .img-responsive1,  .img-responsive3, .img-responsive4{
+   
+    padding: 20px;
+    width: 200px;
+
+}
+.img-responsive2{
+    padding: 20px;
+    margin-top: 20px;
+    width: 200px;
+}
+/* verification portal */
+.container-verefy{
+    padding: 100px;
+    margin-left: 400px;
+    
+}
+.form-row {
+    color: aliceblue;
+    border:solid 1px ;
+    width: 500px;
+    padding: 50px;
+    border-radius: 20px;
+}
+.btn-form{
+    background-color: #ffc107;
+}
+.container-section-main,.section-form{
+    margin-top: 50px;
+    margin-bottom: 100px;
+    width: 800px;
+    margin-left: 150px;
+    
+   
+
+
+}
+.section-form{
+    border: solid 1px #ffc107;
+    box-shadow: black 20px  20px 20px 20px;
+    padding: 50px;
+    border-radius: 15px;
+}
+
+/* THIS IS ADMIN STYLE  */
+
+.container-table {
+    margin-top: 50px;
+    padding: 60px;
+}
+.container-login-wrapper{
+    padding:50px;
+    margin-left: 100px;
+    align-items: center ;
+}
+.form-login{
+    width: 400px;
+    border: 1px #ffc107;
+    box-shadow: black 0px 20px 20px;
+    border-radius: 20px;
+    padding:20px;
+    margin-left: 400px;
+}
+.header-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.img-agency-header{
+    width: 200px;
+    height: 20vh;
+    margin-right: 40px;
+}
+.div-card-contents{
+    font-size:15px;
+}
+
+/*MOBILE*/
+
+@media  (max-width:844px) {
+   
+
+    .navbar, .navbar-header{
+       
+        
+        width: 367px; 
+        
+    }
+    .navbar-header label{
+        display: inline-flex;
+        color: white;
+    }
+    .nav li{
+        display: none;
+    }
+
+    .carousel-inner, .carousel-item, .img1 {
+       
+        height:300px;
+        width: 100%;
+        
+    }
+    
+    .img-me{
+        width: 100%;
+       padding: 20px;
+       border-radius: 10px;
+    }
+    .card-body-content p{
+        width: 350px;
+        padding: 30px;
+        text-align: center;;
+        font-size: 15px;
+        float: right;;
+        height: 300px;
+        margin-left: 10px;
+        
+    }
+    .card-none{
+        display: none;
+    }
+
+    
+    .card-body{
+        width: 350px;
+        font-size: small;
+        margin-bottom: 100px;
+    }
+    .card-container{
+        display: none;
+        
+    }
+    .card-content{
+        display: none;
+    }
+    .img2 {
+        height:300px;
+        width: 100%;
+        border-radius: 15px;
+    }
+    .text{
+        font-size: small;
+        display: visible;
+    }
+    .card-body-join{
+        padding:15px;
+    }
+    .card-secondary{
+        height: 350px;
+    }
+    .section-content-two{
+        width: 100px;
+    }
+    
+   
+}
+
+.image {
+    width: 500px;
+    height: 300px;
+}
+
+/* CONTENT CSS */
+.wrapper {
+    height: 100%;
+    width: 100%;
+}
+

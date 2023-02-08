@@ -1,0 +1,87 @@
+{% extends 'base.html' %} 
+
+{% block title %}
+Content
+{% endblock %}
+
+{% block content %}
+
+<div class="wrapper">
+    <div class="container">
+        <nav class="navbar navbar-default">
+            <div class="title-header">
+                <h1 class="title text-light">PWD</h1>
+            </div>
+            <div class="navbar-header">
+                <div class="navbar-content">
+                    <div class="row">
+                        <div class="col">
+                            <ul class="nav">
+                                <li class="nav-item mx-3">
+                                    <a class="btn btn-outlined-warning shadow-sm border-1 text-light" aria-current="page" href="{{ url_for('home') }}">Home</a>
+                                  </li>
+                                  <li class="nav-item mx-3">
+                                    <a class="btn btn-outlined-warning shadow-sm border-1 text-light" href="#">View related Agency</a>
+                                  </li>
+                                  <li class="nav-item mx-3">
+                                    <a class="btn btn-outlined-warning shadow-sm border-1 text-light" href="#">FAQ</a>
+                                  </li>
+                                  <li class="nav-item mx-3">
+                                    <a class="btn btn-outlined-warning shadow-sm border-1 text-light" href="{{ url_for('content') }}">Content</a>
+                                  </li>
+                                  <li class="nav-item mx-3">
+                                    <a class="btn btn-outlined-warning shadow-sm border-1 text-light" href="{{ url_for('register') }}">Log In</a>
+                                  </li>
+                                  <li class="nav-item mx-3">
+                                    <a class="btn btn-outlined-warning shadow-sm border-1 text-light" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" href="#">About Us</a>
+                                  </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <hr>
+        <div class="container-agency">
+            <header class="header-title">
+                <img src="/static/image/DSWD-Logo.png" alt="dswd" class="img-agency-header">
+                <span class="header-span fs-4 fw-bold text-light mb-5">REPUBLIKA NG PILIPINAS</span>
+           
+           
+                <div class="mt-5" style="position:relative;right:290px">
+                    <span class="header-span fs-4 text-light fw-bold">KAGAWARAN NG KAGALINGAN AT PAGPAPAUNLAD PANLIPUNAN</span>
+                </div>
+            </header>
+            <hr>
+            <section class="container-agency-main">
+                <h1 class="fs-1 fw-bold text-light">PWD Privileges</h1>
+                <div class="card w-75 mt-5 rounded-4 shadow">
+                    <div class="card-body">
+                      <h5 class="card-title lead"><strong>Question 1:</strong> Magkano ang discount sa Public Transportation para sa mga “Persons With Disabilities”?</h5>
+                      <div class="div-card-contents mt-4 mx-5 lead">
+                            <p class="card-text">Reply: Ayon sa Section 32. Chapter 8. Other Privileges and Incentives, Republic Act No. 9442, An Act Amending Republic Act No. 7277, Otherwise known as the “Magna Carta for Persons With Disabilities” binabangit na:</p>
+                            <p class="card-text">Letter g: “At least 20% discount in public railways, skyways and bus fare for the exclusive use or enjoyment of Persons With Disabilities.” Kung regular fare (5 kilometers) sa jeep ay P 8.00 X 20% = P 6.40 ang nararapat na pasahe sa jeep.</p>
+                      </div>
+                      <br>
+                      <h5 class="card-title lead"><strong>Question 2:</strong> Saan pa may ibang “privileges” para sa mga Persons With Disabilities?</h5>
+                      <div class="div-card-contents mt-4 mx-5 lead">
+                            <ul>
+                                <li>20% discount for all services in hotels and similar lodging establishments, restaurants & recreation centers.</li>
+                                <li>A minimum of 20% discount on admission fees on theaters, cinema houses, concert hall, circuses carnivals and other similar places of culture, leisure and amusement.</li>
+                                <li>At least 20% discount for all purchase of medicines in all drugstores.</li>
+                                <li>At least 20% discount on medical & dental services including (diagnostic and laboratory fees & professional fees of attending doctors in all private hospitals & medical facilities).</li>
+                                <li>At least 20% discount on fare for domestic air and sea travel.</li>
+                                <li>Educational assistance to pursue primary, secondary, tertiary, post tertiary, vocational or technical education in public & private schools thru scholarship grants, financial aids, subsidies and other incentives such as books, learning materials & uniform allowance(DEPED).</li>
+                                <li>Continuation of benefits of GSIS, SSS & PAG-IBIG (previously employed ) as the case may be necessary.</li>
+                                <li>Special discounts (5%) in special programs for Persons With Disabilities on purchase of basic commodities (with guidelines from DTI & DA).</li>
+                                <li>Provision of express lanes for Persons With Disabilities in all commercial and government establishments.</li>
+                            </ul>
+                      </div>
+                    </div>
+                  </div>
+            </section>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

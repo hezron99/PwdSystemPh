@@ -1,0 +1,356 @@
+{% extends 'base.html' %} 
+
+{% block title %}
+loans
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+    <nav class="navbar navbar-default shadow-sm rounded-4  px-4 py-4">
+        <div class="title-header">
+            <h1 class="title text-light">PWD Services</h1>
+        </div>
+        <div class="navbar-header">
+            <div class="navbar-content">
+                <div class="row">
+                    <div class="col">
+                        <ul class="nav">
+                              <li class="nav-item mx-3">
+                                <a class="btn btn-outlined-warning shadow-sm border-1 text-light" href="{{ url_for('agency') }}">View Supported Agency</a>
+                              </li>
+                              <li class="nav-item mx-3">
+                                <a class="btn btn-outlined-warning shadow-sm border-1 text-light" href="">FAQ</a>
+                              </li>
+                              <li class="nav-item mx-3">
+                                <a class="btn btn-outlined-warning shadow-sm border-1 text-light" href="{{ url_for('content') }}">Privileges</a>
+                              </li>
+                              <li class="nav-item mx-3">
+                                <a class="btn btn-outlined-warning shadow-sm border-1 text-light" href="{{ url_for('loan') }}">Loans</a>
+                              </li>
+                              <li class="nav-item mx-3">
+                                <a class="btn btn-outlined-warning shadow-sm border-1 text-light" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" href="#">Requirements</a>
+                              </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container-loan">
+        <div class="content-wrapper">
+            <div class="content-loan">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui reprehenderit tenetur laudantium cupiditate ducimus doloremque officiis distinctio, voluptatem aliquam, eos est culpa sunt assumenda ut voluptatum. Consequatur nostrum repudiandae excepturi.
+                </p>
+            </div>
+        </div>
+
+
+        <div class="container-loan-reg">
+            <p>Lorem ipsum dolor sit amet.</p>
+                <button class="btn-collapse shadow-sm" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                    SSS Loan
+                </button>
+                
+            <div class="loan-info collapse mt-3" id="collapseExample">
+                <form class="form-loan row g-3">
+                    <div class="col-md-4">
+                      <label for="validationDefault01" class="form-label">First name</label>
+                      <input type="text" class="form-control" id="validationDefault01" value="Mark" required>
+                    </div>
+                    <div class="col-md-4">
+                      <label for="validationDefault02" class="form-label">Last name</label>
+                      <input type="text" class="form-control" id="validationDefault02" value="Otto" required>
+                    </div>
+                    <div class="col-md-4">
+                      <label for="validationDefaultUsername" class="form-label">Username</label>
+                      <div class="input-group">
+                        <span class="input-group-text" id="inputGroupPrepend2">@</span>
+                        <input type="text" class="form-control" id="validationDefaultUsername"  aria-describedby="inputGroupPrepend2" required>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <label for="validationDefault03" class="form-label">City</label>
+                      <input type="text" class="form-control" id="validationDefault03" required>
+                    </div>
+                    <div class="col-md-3">
+                      <label for="validationDefault04" class="form-label">State</label>
+                      <select class="form-select" id="validationDefault04" required>
+                        <option selected disabled value="">Choose...</option>
+                        <option>...</option>
+                      </select>
+                    </div>
+                    <div class="col-md-3">
+                      <label for="validationDefault05" class="form-label">Zip</label>
+                      <input type="text" class="form-control" id="validationDefault05" required>
+                    </div>
+                    <div class="col-md-3">
+                        <label for="validationDefault04" class="form-label">Type of Loan</label>
+                        <select class="form-select" id="validationDefault04" required>
+                          <option selected disabled value="">Choose...</option>
+                          <option>Calamity</option>
+                          <option>Medical</option>
+                          <option>Disability</option>
+                          <option></option>
+                        </select>
+                      </div>
+                    <div class="col-12">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
+                        <label class="form-check-label" for="invalidCheck2">
+                          Agree to terms and conditions
+                        </label>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <button class="btn btn-primary" type="submit">Submit form</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="container-loan-reg mt-5">
+        <hr>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <button class="btn-collapse shadow-sm" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample1" aria-expanded="false" aria-controls="collapseExample">
+            Pag Ibig Loan
+        </button>
+        <div class="loan-info collapse mt-3" id="collapseExample1">
+            <form class="form-loan row g-3">
+                <div class="col-md-4">
+                  <label for="validationDefault01" class="form-label">First name</label>
+                  <input type="text" class="form-control" id="validationDefault01" value="Mark" required>
+                </div>
+                <div class="col-md-4">
+                  <label for="validationDefault02" class="form-label">Last name</label>
+                  <input type="text" class="form-control" id="validationDefault02" value="Otto" required>
+                </div>
+                <div class="col-md-4">
+                  <label for="validationDefaultUsername" class="form-label">Username</label>
+                  <div class="input-group">
+                    <span class="input-group-text" id="inputGroupPrepend2">@</span>
+                    <input type="text" class="form-control" id="validationDefaultUsername"  aria-describedby="inputGroupPrepend2" required>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <label for="validationDefault03" class="form-label">City</label>
+                  <input type="text" class="form-control" id="validationDefault03" required>
+                </div>
+                <div class="col-md-3">
+                  <label for="validationDefault04" class="form-label">State</label>
+                  <select class="form-select" id="validationDefault04" required>
+                    <option selected disabled value="">Choose...</option>
+                    <option>...</option>
+                  </select>
+                </div>
+                <div class="col-md-3">
+                  <label for="validationDefault05" class="form-label">Zip</label>
+                  <input type="text" class="form-control" id="validationDefault05" required>
+                </div>
+                <div class="col-md-3">
+                    <label for="validationDefault04" class="form-label">Type of Loan</label>
+                    <select class="form-select" id="validationDefault04" required>
+                      <option selected disabled value="">Choose...</option>
+                      <option>Calamity</option>
+                      <option>Medical</option>
+                      <option>Disability</option>
+                      <option></option>
+                    </select>
+                  </div>
+                <div class="col-12">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
+                    <label class="form-check-label" for="invalidCheck2">
+                      Agree to terms and conditions
+                    </label>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <button class="btn btn-primary" type="submit">Submit form</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="container-loan-reg mt-5">
+        <hr>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <button class="btn-collapse shadow-sm" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample">
+            PWD Loan
+        </button>
+        <div class="loan-info collapse mt-3" id="collapseExample2">
+            <form class="form-loan row g-3">
+                <div class="col-md-4">
+                  <label for="validationDefault01" class="form-label">First name</label>
+                  <input type="text" class="form-control" id="validationDefault01" value="Mark" required>
+                </div>
+                <div class="col-md-4">
+                  <label for="validationDefault02" class="form-label">Last name</label>
+                  <input type="text" class="form-control" id="validationDefault02" value="Otto" required>
+                </div>
+                <div class="col-md-4">
+                  <label for="validationDefaultUsername" class="form-label">Username</label>
+                  <div class="input-group">
+                    <span class="input-group-text" id="inputGroupPrepend2">@</span>
+                    <input type="text" class="form-control" id="validationDefaultUsername"  aria-describedby="inputGroupPrepend2" required>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <label for="validationDefault03" class="form-label">City</label>
+                  <input type="text" class="form-control" id="validationDefault03" required>
+                </div>
+                <div class="col-md-3">
+                  <label for="validationDefault04" class="form-label">State</label>
+                  <select class="form-select" id="validationDefault04" required>
+                    <option selected disabled value="">Choose...</option>
+                    <option>...</option>
+                  </select>
+                </div>
+                <div class="col-md-3">
+                  <label for="validationDefault05" class="form-label">Zip</label>
+                  <input type="text" class="form-control" id="validationDefault05" required>
+                </div>
+                <div class="col-md-3">
+                    <label for="validationDefault04" class="form-label">Type of Loan</label>
+                    <select class="form-select" id="validationDefault04" required>
+                      <option selected disabled value="">Choose...</option>
+                      <option>Calamity</option>
+                      <option>Medical</option>
+                      <option>Disability</option>
+                      <option></option>
+                    </select>
+                  </div>
+                <div class="col-12">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
+                    <label class="form-check-label" for="invalidCheck2">
+                      Agree to terms and conditions
+                    </label>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <button class="btn btn-primary" type="submit">Submit form</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<footer class="text-center text-lg-start text-muted">
+    <!-- Section: Social media -->
+    <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+    <!-- Left -->
+    <div class="me-5 d-none d-lg-block">
+        <span>Get connected with us on social networks:</span>
+    </div>
+    <!-- Left -->
+
+    <!-- Right -->
+    <div>
+        <a href="" class="me-4 link-secondary">
+        <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="" class="me-4 link-secondary">
+        <i class="fab fa-twitter"></i>
+        </a>
+        <a href="" class="me-4 link-secondary">
+        <i class="fab fa-google"></i>
+        </a>
+        <a href="" class="me-4 link-secondary">
+        <i class="fab fa-instagram"></i>
+        </a>
+        <a href="" class="me-4 link-secondary">
+        <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="" class="me-4 link-secondary">
+        <i class="fab fa-github"></i>
+        </a>
+    </div>
+    <!-- Right -->
+    </section>
+    <!-- Section: Social media -->
+
+    <!-- Section: Links  -->
+    <section class="">
+    <div class="container text-center text-md-start mt-5">
+        <!-- Grid row -->
+        <div class="row mt-3">
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+            <!-- Content -->
+            <h6 class="text-uppercase fw-bold mb-4">
+            <i class="fas fa-gem me-3 text-secondary"></i>Company name
+            </h6>
+            <p>
+            Here you can use rows and columns to organize your footer content. Lorem ipsum
+            dolor sit amet, consectetur adipisicing elit.
+            </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">
+            Products
+            </h6>
+            <p>
+            <a href="#!" class="text-reset">Angular</a>
+            </p>
+            <p>
+            <a href="#!" class="text-reset">React</a>
+            </p>
+            <p>
+            <a href="#!" class="text-reset">Vue</a>
+            </p>
+            <p>
+            <a href="#!" class="text-reset">Laravel</a>
+            </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">
+            Useful links
+            </h6>
+            <p>
+            <a href="#!" class="text-reset">Pricing</a>
+            </p>
+            <p>
+            <a href="#!" class="text-reset">Settings</a>
+            </p>
+            <p>
+            <a href="#!" class="text-reset">Orders</a>
+            </p>
+            <p>
+            <a href="#!" class="text-reset">Help</a>
+            </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+            <p><i class="fas fa-home me-3 text-secondary"></i> New York, NY 10012, US</p>
+            <p>
+            <i class="fas fa-envelope me-3 text-secondary"></i>
+            info@example.com
+            </p>
+            <p><i class="fas fa-phone me-3 text-secondary"></i> + 01 234 567 88</p>
+            <p><i class="fas fa-print me-3 text-secondary"></i> + 01 234 567 89</p>
+        </div>
+        <!-- Grid column -->
+        </div>
+        <!-- Grid row -->
+    </div>
+    </section>
+    <!-- Section: Links  -->
+
+    <!-- Copyright -->
+    <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.025);">
+    © 2021 Copyright:
+    <a class="text-reset fw-bold" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+    </div>
+    <!-- Copyright -->
+</footer>
+{% endblock %}
